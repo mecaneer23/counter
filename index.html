@@ -50,11 +50,19 @@
         function addCounters() {
             let original = document.getElementById("1");
             let container = document.getElementById("container");
-            for (let i = 0; i < parseInt(document.getElementById("how-many").value); i++) {
-                const newNode = original.cloneNode(true);
-                newNode.id = i;
-                newNode.children[0].placeholder = "Counter " + (container.children.length + 1);
-                container.appendChild(newNode);
+            let howMany = parseInt(document.getElementById("how-many").value);
+            if (howMany >= 0) {
+                for (let i = 0; i < howMany; i++) {
+                    const newNode = original.cloneNode(true);
+                    newNode.id = i;
+                    newNode.children[0].placeholder = "Counter " + (container.children.length + 1);
+                    newNode.children[1].value = "0";
+                    container.appendChild(newNode);
+                }
+                return
+            }
+            if (container.children.length > -howMany) {
+                container.removeChild(container.children[container.children.length - 1]);
             }
         }
     </script>
