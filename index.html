@@ -24,14 +24,14 @@
         <header>
             <h1>Counters:</h1>
             <form action="javascript:addCounters();">
-                <input id="how-many" value="1" type="number" min="1">
+                <input id="how-many" value="1" type="number">
                 <input type="submit" value="Add">
             </form>
         </header>
         <div id="container">
             <div class="counter" id="1">
                 <input class="title" placeholder="Counter 1"></input>
-                <div class="button number" onclick="addOne(this)">0</div>
+                <input class="number" value="0">
                 <div class="plus-minus">
                     <div class="button" onclick="subtractOne(this.parentElement.parentElement.children[1])">-</div>
                     <div class="button" onclick="addOne(this.parentElement.parentElement.children[1])">+</div>
@@ -41,19 +41,19 @@
     </main>
     <script>
         function addOne(counter) {
-            counter.innerHTML = parseInt(counter.innerHTML) + 1
+            counter.value = parseInt(counter.value) + 1
         }
 
         function subtractOne(counter) {
-            counter.innerHTML = parseInt(counter.innerHTML) - 1
+            counter.value = parseInt(counter.value) - 1
         }
         function addCounters() {
             let original = document.getElementById("1");
             let container = document.getElementById("container");
-            for (let i = container.children.length; i < parseInt(document.getElementById("how-many").value); i++) {
+            for (let i = 0; i < parseInt(document.getElementById("how-many").value); i++) {
                 const newNode = original.cloneNode(true);
                 newNode.id = i;
-                newNode.children[0].placeholder = "Counter " + (i + 1);
+                newNode.children[0].placeholder = "Counter " + (container.children.length + 1);
                 container.appendChild(newNode);
             }
         }

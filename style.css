@@ -91,10 +91,9 @@ header {
     width: 30vh;
     color: black;
     font-size: 16vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    border: none;
+    padding: 0;
+    text-align: center;
 }
 
 .button {
