@@ -50,14 +50,6 @@ body {
 
 header {
     margin: 10vh;
-    display: flex;
-    align-items: center;
-}
-
-#how-many {
-    margin-left: 1vw;
-    padding: 0.5vh 0;
-    width: 5vw;
 }
 
 #container {

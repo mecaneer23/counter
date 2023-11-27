@@ -22,7 +22,7 @@
     </a>
     <main>
         <header>
-            <h1>Counters:</h1>
+            <h1>Counter</h1>
             <form action="javascript:addCounters();">
                 <input id="how-many" value="1" type="number">
                 <input type="submit" value="Add">
@@ -59,10 +59,12 @@
                     newNode.children[1].value = "0";
                     container.appendChild(newNode);
                 }
-                return
+                return;
             }
             if (container.children.length > -howMany) {
-                container.removeChild(container.children[container.children.length - 1]);
+                for (let i = 0; i < -howMany; i++) {
+                    container.removeChild(container.children[container.children.length - 1]);
+                }
             }
         }
     </script>
