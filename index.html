@@ -20,7 +20,44 @@
                 fill="currentColor" class="octo-body"></path>
         </svg>
     </a>
-    <h1>Counter</h1>
+    <main>
+        <header>
+            <h1>Counters:</h1>
+            <form action="javascript:addCounters();">
+                <input id="how-many" value="1" type="number" min="1">
+                <input type="submit" value="Add">
+            </form>
+        </header>
+        <div id="container">
+            <div class="counter" id="1">
+                <input class="title" placeholder="Counter 1"></input>
+                <div class="button number" onclick="addOne(this)">0</div>
+                <div class="plus-minus">
+                    <div class="button" onclick="subtractOne(this.parentElement.parentElement.children[1])">-</div>
+                    <div class="button" onclick="addOne(this.parentElement.parentElement.children[1])">+</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function addOne(counter) {
+            counter.innerHTML = parseInt(counter.innerHTML) + 1
+        }
+
+        function subtractOne(counter) {
+            counter.innerHTML = parseInt(counter.innerHTML) - 1
+        }
+        function addCounters() {
+            let original = document.getElementById("1");
+            let container = document.getElementById("container");
+            for (let i = container.children.length; i < parseInt(document.getElementById("how-many").value); i++) {
+                const newNode = original.cloneNode(true);
+                newNode.id = i;
+                newNode.children[0].placeholder = "Counter " + (i + 1);
+                container.appendChild(newNode);
+            }
+        }
+    </script>
 </body>
 
 </html>

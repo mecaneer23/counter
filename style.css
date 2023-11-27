@@ -1,6 +1,7 @@
 body {
     background-color: rgb(2, 0, 36);
     background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    color: white;
 }
 
 .github-corner {
@@ -45,4 +46,82 @@ body {
     .github-corner .octo-arm {
         animation: octocat-wave 560ms ease-in-out
     }
+}
+
+header {
+    margin: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+#how-many {
+    margin-left: 1vw;
+    padding: 0.5vh 0;
+    width: 5vw;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 94vw;
+}
+
+.counter {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    border-radius: 1vw 1vw 0 0;
+    width: 28vh;
+    border: none;
+    padding: 2vh 1vh;
+    color: black;
+    font-size: x-large;
+}
+
+.title::placeholder {
+    color: black;
+}
+
+.number {
+    height: 30vh;
+    width: 30vh;
+    color: black;
+    font-size: 16vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button {
+    background-color: lightgray;
+    user-select: none;
+    margin: 0;
+}
+
+.button:hover {
+    background-color: gray;
+}
+
+.plus-minus {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+}
+
+.plus-minus .button {
+    color: black;
+    font-size: 5vh;
+}
+
+.plus-minus :nth-child(1) {
+    border-bottom-left-radius: 1vw;
+}
+
+.plus-minus :nth-child(2) {
+    border-bottom-right-radius: 1vw;
 }
