@@ -60,18 +60,19 @@ header {
 }
 
 .counter {
+    color: black;
     height: 50vh;
     display: flex;
     flex-direction: column;
 }
 
 .title {
-    border-radius: 1vw 1vw 0 0;
-    width: 28vh;
+    border-top-left-radius: 1vw;
+    width: 20vh;
     border: none;
     padding: 2vh 1vh;
-    color: black;
     font-size: x-large;
+    background-color: lightgray;
 }
 
 .title::placeholder {
@@ -81,7 +82,6 @@ header {
 .number {
     height: 30vh;
     width: 30vh;
-    color: black;
     font-size: 16vh;
     border: none;
     padding: 0;
@@ -105,7 +105,6 @@ header {
 }
 
 .plus-minus .button {
-    color: black;
     font-size: 5vh;
 }
 
@@ -115,4 +114,23 @@ header {
 
 .plus-minus :nth-child(2) {
     border-bottom-right-radius: 1vw;
+}
+
+.x:hover {
+    background-color: #c24343;
+}
+
+.toprow {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.x {
+    width: 6vh;
+    display: inline-block;
+    margin: 0;
+    border-top-right-radius: 1vw;
+    padding: 2vh 1vh;
+    font-size: 5vh;
+    text-align: center;
 }

@@ -1,1 +1,4 @@
-- some way to remove counters
+- bug: if you remove counters one at a time
+and then add more counters, the placeholder
+values might not be completely correctly
+representative of the amount of counters present

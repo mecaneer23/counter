@@ -29,8 +29,11 @@
             </form>
         </header>
         <div id="container">
-            <div class="counter" id="1">
-                <input class="title" placeholder="Counter 1"></input>
+            <div class="counter">
+                <div class="toprow">
+                    <input class="title" placeholder="Counter 1"></input>
+                    <div class="button x" onclick="deleteCounter(this.parentElement.parentElement)">&times;</div>
+                </div>
                 <input class="number" value="0">
                 <div class="plus-minus">
                     <div class="button" onclick="subtractOne(this.parentElement.parentElement.children[1])">-</div>
@@ -48,15 +51,14 @@
             counter.value = parseInt(counter.value) - 1
         }
         function addCounters() {
-            let original = document.getElementById("1");
+            let original = document.querySelector(".counter");
             let container = document.getElementById("container");
             let howMany = parseInt(document.getElementById("how-many").value);
             if (howMany >= 0) {
                 for (let i = 0; i < howMany; i++) {
                     const newNode = original.cloneNode(true);
-                    newNode.id = i;
-                    newNode.children[0].placeholder = "Counter " + (container.children.length + 1);
-                    newNode.children[0].value = "";
+                    newNode.children[0].children[0].placeholder = "Counter " + (container.children.length + 1);
+                    newNode.children[0].children[0].value = "";
                     newNode.children[1].value = "0";
                     container.appendChild(newNode);
                 }
@@ -66,6 +68,12 @@
                 for (let i = 0; i < -howMany; i++) {
                     container.removeChild(container.children[container.children.length - 1]);
                 }
+            }
+        }
+        function deleteCounter(counter) {
+            let container = document.getElementById("container");
+            if (container.children.length > 1) {
+                container.removeChild(counter);
             }
         }
     </script>
