@@ -2,6 +2,7 @@ body {
     background-color: rgb(2, 0, 36);
     background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
     color: white;
+    margin: 0;
 }
 
 .github-corner {
@@ -48,27 +49,27 @@ body {
     }
 }
 
-header {
-    margin: 10vh;
-}
-
 #container {
+    margin-top: 10vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 94vw;
+    font-size: 0;
 }
 
 .counter {
     color: black;
-    height: 50vh;
+    margin-bottom: 6vh;
+}
+
+.toprow {
     display: flex;
-    flex-direction: column;
 }
 
 .title {
-    border-top-left-radius: 1vw;
     width: 20vh;
+    height: 6vh;
+    border-top-left-radius: 1vw;
     border: none;
     padding: 2vh 1vh;
     font-size: x-large;
@@ -77,6 +78,20 @@ header {
 
 .title::placeholder {
     color: black;
+}
+
+.x {
+    width: 6vh;
+    height: 6vh;
+    border-top-right-radius: 1vw;
+    border: none;
+    padding: 2vh 1vh;
+    font-size: 5vh;
+    text-align: center;
+}
+
+.x:hover {
+    background-color: #c24343 !important;
 }
 
 .number {
@@ -98,14 +113,11 @@ header {
     background-color: gray;
 }
 
-.plus-minus {
-    display: grid;
-    grid-template-columns: auto auto;
-    text-align: center;
-}
-
 .plus-minus .button {
+    width: 15vh;
+    text-align: center;
     font-size: 5vh;
+    display: inline-block;
 }
 
 .plus-minus :nth-child(1) {
@@ -116,21 +128,14 @@ header {
     border-bottom-right-radius: 1vw;
 }
 
-.x:hover {
-    background-color: #c24343;
-}
-
-.toprow {
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-.x {
-    width: 6vh;
-    display: inline-block;
-    margin: 0;
-    border-top-right-radius: 1vw;
-    padding: 2vh 1vh;
-    font-size: 5vh;
+.add {
+    display: block;
+    background-color: white;
+    width: 30vh;
+    border-radius: 1vw;
+    padding: 6vh 0;
+    font-size: 30vh;
+    color: black;
     text-align: center;
+    margin-bottom: 6vh;
 }
