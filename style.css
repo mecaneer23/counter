@@ -55,11 +55,13 @@ body {
     flex-wrap: wrap;
     justify-content: space-evenly;
     font-size: 0;
+    width: 80vw;
+    margin-left: 10vw;
 }
 
 .counter {
     color: black;
-    margin-bottom: 6vh;
+    margin: 0 6vh 6vh 6vh;
 }
 
 .toprow {
@@ -67,11 +69,11 @@ body {
 }
 
 .title {
-    width: 20vh;
+    width: 19vh;
     height: 6vh;
     border-top-left-radius: 1vw;
     border: none;
-    padding: 2vh 1vh;
+    padding: 2vh 0 2vh 1vh;
     font-size: x-large;
     background-color: lightgray;
 }
@@ -81,11 +83,11 @@ body {
 }
 
 .x {
-    width: 6vh;
+    width: 10vh;
     height: 6vh;
     border-top-right-radius: 1vw;
     border: none;
-    padding: 2vh 1vh;
+    padding: 2vh 0;
     font-size: 5vh;
     text-align: center;
 }
@@ -137,5 +139,5 @@ body {
     font-size: 30vh;
     color: black;
     text-align: center;
-    margin-bottom: 6vh;
+    margin: 0 6vh 6vh 6vh;
 }
