@@ -62,6 +62,8 @@ body {
 .counter {
     color: black;
     margin: 0 6vh 6vh 6vh;
+    width: min-content;
+    min-width: 30vh;
 }
 
 .toprow {
@@ -69,7 +71,7 @@ body {
 }
 
 .title {
-    width: 19vh;
+    width: calc(100% - 11vh);
     height: 6vh;
     border-top-left-radius: 1vw;
     border: none;
@@ -97,12 +99,13 @@ body {
 }
 
 .number {
-    height: 30vh;
-    width: 30vh;
+    height: 20vh;
     font-size: 16vh;
     border: none;
-    padding: 0;
+    padding: 5vh 0;
+    background-color: white;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .button {
@@ -116,7 +119,7 @@ body {
 }
 
 .plus-minus .button {
-    width: 15vh;
+    width: 50%;
     text-align: center;
     font-size: 5vh;
     display: inline-block;

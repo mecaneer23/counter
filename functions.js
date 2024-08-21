@@ -1,9 +1,9 @@
 function addOne(counter) {
-    counter.value = parseInt(counter.value) + 1
+    counter.innerHTML = parseInt(counter.innerHTML) + 1
 }
 
 function subtractOne(counter) {
-    counter.value = parseInt(counter.value) - 1
+    counter.innerHTML = parseInt(counter.innerHTML) - 1
 }
 
 function addCounter() {
@@ -11,8 +11,8 @@ function addCounter() {
     let container = document.getElementById("container");
     const newNode = original.cloneNode(true);
     newNode.children[0].children[0].placeholder = "Counter " + container.children.length;
-    newNode.children[0].children[0].value = "";
-    newNode.children[1].value = "0";
+    newNode.children[0].children[0].innerHTML = "";
+    newNode.children[1].innerHTML = "0";
     container.insertBefore(newNode, container.children[container.childElementCount - 1]);
 }
 
