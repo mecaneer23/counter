@@ -73,6 +73,7 @@ body {
 .title {
     width: calc(100% - 11vh);
     height: 6vh;
+    border-radius: 0;
     border-top-left-radius: 1vw;
     border: none;
     padding: 2vh 0 2vh 1vh;
