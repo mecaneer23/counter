@@ -138,10 +138,11 @@ body {
     display: block;
     background-color: white;
     width: 30vh;
-    border-radius: 1vw;
-    padding: 6vh 0;
+    height: 30vh;
+    border-radius: 50%;
     font-size: 30vh;
     color: black;
     text-align: center;
-    margin: 0 6vh 6vh 6vh;
+    line-height: 1;
+    margin: 6vh;
 }
